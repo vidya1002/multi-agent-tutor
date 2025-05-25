@@ -4,7 +4,7 @@ import { tutorAgent } from './agents/tutorAgent.js';
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 app.use(express.json());
 
 app.post('/ask', async (req, res) => {
@@ -13,4 +13,3 @@ app.post('/ask', async (req, res) => {
     res.json({ response });
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
